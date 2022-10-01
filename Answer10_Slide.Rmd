@@ -1,0 +1,36 @@
+---
+title: "Answer10"
+author: "Jacob Oh"
+date: "2022-10-01"
+output:
+  xaringan::moon_reader:
+    css: [metropolis, metropolis-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+###### Draw Star
+
+```{r Stars, fig.height=2, dev='svg'}
+
+library(ggplot2)
+
+x1 <- c( 0, 2, -2)
+y1 <- c(-2, 1,  1)
+
+ggplot() + 
+  geom_polygon(data = data.frame(x = x1, y = y1), aes(x = x, y = y), fill="red")
+  
+```
+
+---
+
+
