@@ -17,20 +17,44 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
-###### Draw Star
+# Draw Star
 
-```{r Stars, fig.height=2, dev='svg'}
+```{r Star, fig.height=2, dev='svg'}
 
 library(ggplot2)
 
 x1 <- c( 0, 2, -2)
 y1 <- c(-2, 1,  1)
+x2 <- c( 0,  2, -2)
+y2 <- c( 2, -1, -1)
 
 ggplot() + 
-  geom_polygon(data = data.frame(x = x1, y = y1), aes(x = x, y = y), fill="red")
+  geom_polygon(data = data.frame(x = x1, y = y1), aes(x = x, y = y), fill="red") + 
+  geom_polygon(data = data.frame(x = x2, y = y2), aes(x = x, y = y), fill="red")
   
 ```
 
 ---
+
+# Draw Scatter
+
+```{r Scatter, fig.height=2, dev='svg'}
+
+library(ggplot2)
+
+x1 <- rpois(50, 5)
+y1 <- rpois(50, 5)
+
+ggplot() + 
+  geom_point(data = data.frame(x = x1, y= y1), aes(x = x, y = y), size=1)
+  
+```
+
+---
+
+
+
+# The End
+
 
 

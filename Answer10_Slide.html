@@ -28,7 +28,7 @@ class: center, middle, inverse, title-slide
 
 
 
-###### Draw Star
+# Draw Star
 
 
 ```r
@@ -36,14 +36,39 @@ library(ggplot2)
 
 x1 &lt;- c( 0, 2, -2)
 y1 &lt;- c(-2, 1,  1)
+x2 &lt;- c( 0,  2, -2)
+y2 &lt;- c( 2, -1, -1)
 
 ggplot() + 
-  geom_polygon(data = data.frame(x = x1, y = y1), aes(x = x, y = y), fill="red")
+  geom_polygon(data = data.frame(x = x1, y = y1), aes(x = x, y = y), fill="red") + 
+  geom_polygon(data = data.frame(x = x2, y = y2), aes(x = x, y = y), fill="red")
 ```
 
-![](Answer10_Slide_files/figure-html/Stars-1.svg)&lt;!-- --&gt;
+![](Answer10_Slide_files/figure-html/Star-1.svg)&lt;!-- --&gt;
 
 ---
+
+# Draw Scatter
+
+
+```r
+library(ggplot2)
+
+x1 &lt;- rpois(50, 5)
+y1 &lt;- rpois(50, 5)
+
+ggplot() + 
+  geom_point(data = data.frame(x = x1, y= y1), aes(x = x, y = y), size=1)
+```
+
+![](Answer10_Slide_files/figure-html/Scatter-1.svg)&lt;!-- --&gt;
+
+---
+
+
+
+# The End
+
 
 
     </textarea>
